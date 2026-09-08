@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-sans: Helvetica, Arial, sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+}
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { background: #e9e7e0; }
+body { margin: 0; font-family: Helvetica, Arial, sans-serif; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #7b7b7a; color: #ffffff; }
+
+/* Keep the preview in the same reading order as the copied invitation. */
+.invitation-preview{container-type:inline-size;}
+label:has(textarea){grid-template-columns:1fr;}
+label:has(textarea)>span:first-child{padding-top:14px;padding-bottom:10px;}
+label:has(textarea)>span:last-child{border-left:0;min-height:200px;}
+label:has(textarea) textarea{min-height:200px;padding-left:20px;padding-right:20px;}
+
+input::placeholder, textarea::placeholder { color:#7b7b7a; opacity:1; }
