@@ -8,7 +8,7 @@ type Status = { kind: 'idle' | 'success' | 'error'; message: string };
 
 const escapeHtml = (value: string) => value.replace(/[&<>'"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[c] || c);
 const MAP_URL = 'https://www.google.com/maps/d/viewer?mid=1KJ7yiixl3qmhYIotcKsEc05bFZg0sNA';
-const DEFAULT_MESSAGE = `I'd love to welcome you to SABIN. Let me know if you'd like to arrange a visit.\n\nA sample morning: 10 a.m. breakfast; 10:15 showroom chat; 10:30 factory tour; 11 a.m. workshop: make your own felt souvenir\n\nMake a little time for Chicago, too. Explore our picks for architecture, sights, and dinner: [Explore Chicago](${MAP_URL})`;
+const DEFAULT_MESSAGE = `I'd love to welcome you to SABIN. Let me know if you'd like to arrange a visit.\n\nA sample morning: 10 a.m. breakfast; 10:15 showroom chat; 10:30 factory tour; 11 a.m. workshop\n\nMake a little time for Chicago, too. Explore our picks for architecture, sights, and dinner: [Explore Chicago](${MAP_URL})`;
 
 const safeUrl = (value: string) => { try { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) ? u.href : ''; } catch { return ''; } };
 function messageHtml(value: string) {
